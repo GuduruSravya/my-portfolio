@@ -1,0 +1,40 @@
+.custom-container{
+    padding-top: 80px;
+    margin-top: 100px;
+   
+}
+
+.profile-picture {
+    width: 200px;
+    height: 200px;
+    filter: drop-shadow(10px 8px 6px #333);
+    
+  }
+
+  @media screen and (max-width: 768px) {
+    .profile-picture {
+      width: 150px; /* Adjust the width for smaller screens */
+      height: 150px; /* Adjust the height for smaller screens */
+      filter: drop-shadow(10px 8px 6px #333);
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .profile-picture {
+      width: 100px; /* Adjust the width for even smaller screens */
+      height: 100px; /* Adjust the height for even smaller screens */
+      filter: drop-shadow(10px 8px 6px #333);
+    }
+  }
+
+  .profile-picture:hover{
+    transform: translateY(-5px);
+  }
+
+  .my-content {
+    margin-top: auto;
+    margin-bottom: auto;
+    padding-top: 20px;
+    display: flex;
+    text-align: center;
+  }
