@@ -14,8 +14,23 @@
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-weight: bold;
     color: rgb(20, 20, 86);
-    
 }
+
+@media screen and (max-width: 768px) {
+
+    .custom-nav:hover{
+        background-color: rgb(215, 218, 220);
+        color: rgb(20, 20, 86);
+    }
+
+  }
+
+  @media screen and (max-width: 480px) {
+    .custom-nav:hover{
+        background-color:rgb(215, 218, 220);;
+        color: rgb(20, 20, 86);
+    }
+  }
 
 
   

@@ -18,13 +18,9 @@ function App() {
   return (
     <div>
       <Header/>
-      
-          <Home/>
-          <About />
-          <Skills/>
-          <Projects/>
-          <Certifications/>
-          <Contact/>
+      <Home/>
+       
+          
      
       
     </div>
