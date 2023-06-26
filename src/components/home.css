@@ -1,7 +1,6 @@
 .custom-container{
     padding-top: 80px;
     margin-top: 100px;
-   
 }
 
 .profile-picture {
@@ -13,7 +12,31 @@
     align-items: center;
   }
 
-  @media screen and (max-width: 768px) {
+  .profile-picture:hover{
+    transform: translateY(-20px);
+  }
+
+  .my-content {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color:rgb(20, 20, 86);
+    padding-bottom: 10px;
+    padding-top: 10px;
+  }
+  .my-section {
+    width: 500px;
+    margin: 0 auto;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 20px;
+    
+  }
+
+  @media screen and (max-width: 800px) {
 
     .profile-picture {
       width: 250px; /* Adjust the width for smaller screens */
@@ -21,8 +44,9 @@
       filter: drop-shadow(10px 8px 6px #333);
       
     }
+    
     .my-section {
-      width: 500px;
+      width: 100%;
       margin: 0 auto;
       display:flex;
       justify-content: center;
@@ -40,14 +64,12 @@
   
   @media screen and (max-width: 480px) {
     .profile-picture {
-      width: 150px; /* Adjust the width for even smaller screens */
-      height: 150px; /* Adjust the height for even smaller screens */
+      width: 200px; /* Adjust the width for even smaller screens */
+      height: 200px; /* Adjust the height for even smaller screens */
       filter: drop-shadow(10px 8px 6px #333);
-      padding-bottom: 20px;
-     
     }
     .my-section {
-      width: 500px;
+      width: 100%;
       margin: 0 auto;
       display:flex;
       justify-content: center;
@@ -57,19 +79,10 @@
     }
   }
 
-  .profile-picture:hover{
-    transform: translateY(-5px);
-  }
+ 
 
-  .my-content {
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color:rgb(20, 20, 86);
-    padding-bottom: 10px;
-  }
-  .my-section {
-    width: 500px;
-    margin: 0 auto;
+  @media screen and (min-width: 1000px) {
+    .my-section {
+      width:100%;
+    }
   }

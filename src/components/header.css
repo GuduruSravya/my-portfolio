@@ -8,6 +8,27 @@
     background-color: white;
     
 }
+.custom-navbar.scrolled {
+    background-color:  rgb(20, 20, 86);/* Change the background color when scrolled */
+  }
+
+  .custom-navbar.scrolled .custom-nav{
+    font-size: large;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
+    color:white
+}
+
+.custom-navbar.scrolled .custom-nav:hover{
+    background-color: rgb(56, 56, 91);
+}
+
+.brand-scrolled{
+    color: white;
+}
+.toggle-icon{
+    background-color: white;
+}
 
 .custom-nav{
     font-size: large;
@@ -19,17 +40,10 @@
 @media screen and (max-width: 768px) {
 
     .custom-nav:hover{
-        background-color: rgb(215, 218, 220);
+        background-color: rgb(249, 243, 243);
         color: rgb(20, 20, 86);
     }
 
-  }
-
-  @media screen and (max-width: 480px) {
-    .custom-nav:hover{
-        background-color:rgb(215, 218, 220);;
-        color: rgb(20, 20, 86);
-    }
   }
 
 
