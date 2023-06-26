@@ -30,8 +30,9 @@
   }
   
   .count-card p {
-    font-size: 8px;
+    font-size: 10px;
     margin-top: 5px;
+    font-weight: bold;
   }
 
   @media screen and (max-width: 768px) {
@@ -42,6 +43,12 @@
     .vertical-line{
         display: none;
     }
+    .count-card p {
+        font-size: 11px;
+        font-weight:lighter;
+        letter-spacing: 0.03cm;
+        
+      }
 
   }
 
@@ -52,4 +59,15 @@
        .vertical-line{
         display: none;
     }
+    .count-card h3 {
+        font-size: 20px;
+        
+      }
+    .count-card p {
+        font-size: 10px;
+        font-weight: lighter;
+        letter-spacing: 0.04cm;
+        
+      }
+
   }
