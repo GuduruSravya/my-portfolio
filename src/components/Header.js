@@ -40,7 +40,7 @@ const Header = () => {
     <Navbar className={`custom-navbar ${isScrolled ? 'scrolled' : ''}`}
       fixed="top" expand="lg" expanded={isNavExpanded}  onToggle={handleToggleClick}>
     <Container>
-      <Navbar.Brand href="#home" className={isScrolled?"brand-scrolled":""}>Sravya Guduru</Navbar.Brand>
+      <Navbar.Brand href="#home" className={isScrolled?"brand-scrolled":""}>SG</Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" className={isScrolled?"toggle-icon":""} onClick={()=>{setIsNavExpanded(!isNavExpanded)}}/>
       <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">
         <Nav className="ml-auto justify-content-center text-center">

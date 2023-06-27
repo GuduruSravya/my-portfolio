@@ -1,107 +1,71 @@
-.skills-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-top: 30px;
+#my-skills{
+  display:grid;
+  grid-template-columns: auto auto auto;
+  padding-top: 20px;
+  height:200px;
+  overflow: hidden;
+}
+
+.image-size{
+  border-radius: 10px;
+  height: 60px;
+  width:50px;
+  transition: transform 0.3s;
+}
+
+.showAll {
+  height: auto !important;
+  
+}
+
+
+
+
+.image-size:hover {
+  transform: scale(0.8); /* Enlarge the element on hover */
+}
+
+.image-div{
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+}
+
+#my-skills p{
+  color:#141456;
+}
+
+.my-button{
+  display:flex;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  align-items: center;
+}
+
+.my-button button{
+  color: #141456;
+  display: inline-block;
+  cursor: pointer;
+  background-color: white;
+  border-color: #141456;
+  padding: 10px 20px;
+  border-radius: 16px;
+  
+}
+
+.my-button button:hover{
+ background-color: #141456;
+ color: white;
+}
+
+@media screen and (max-width:768px){
+  #my-skills p{
+    font-size: 12px;
   }
   
-  .skill {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 20px;
-    cursor: pointer;
-    transition: transform 0.3s;
-  }
-  
-  .skill:hover {
-    transform: translateY(-5px);
-  }
-  
-  .hexagon {
-    width: 70px;
-    height: 70px;
-    background-color: #545353;
-    position: relative;
-  }
-  
-  .hexagon:before,
-  .hexagon:after {
-    content: "";
-    position: absolute;
-    width: 0;
-    border-left: 35px solid transparent;
-    border-right: 35px solid transparent;
-  }
-  
-  .hexagon:before {
-    bottom: 100%;
-    border-bottom: 23.3px solid #333;
-  }
-  
-  .hexagon:after {
-    top: 100%;
-    width: 0;
-    border-top: 43.3px solid #333;
-  }
-  /*
-  .hexagon img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }*/
-  
-  .skill p {
-    margin: 0;
-  }
-  
-  /* Additional hexagon styles 
-  .hexagon:before,
-  .hexagon:after {
-    content: '';
-    position: absolute;
-    width: 0;
-    border-left: 60px solid transparent;
-    border-right: 60px solid transparent;
-  }
-  
-  .hexagon:before {
-    bottom: 100%;
-    border-bottom: 35px solid #333;
-  }
-  
-  .hexagon:after {
-    top: 100%;
-    width: 0;
-    border-top: 35px solid #333;
-  }*/
-  
-  /* Adjust styles for responsiveness */
-  @media (max-width: 768px) {
-    .skills-container {
-      margin-top: 20px;
-    }
-  
-    .skill {
-      margin: 10px;
-    }
-  
-    .hexagon {
-      width: 80px;
-      height: 80px;
-    }
-  
-    .hexagon:before,
-    .hexagon:after {
-      border-left: 40px solid transparent;
-      border-right: 40px solid transparent;
-    }
-  
-    .hexagon:before {
-      border-bottom: 23px solid #333;
-    }
-  
-    .hexagon:after {
-      border-top: 23px solid #333;
-    }
-  }
+}

@@ -1,0 +1,14 @@
+/* For iPad Pro */
+@media (max-width: 1024px) and (max-height: 1366px) {
+    body {
+      overflow-y: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+  }
+  
+  /* For Surface Pro 7 */
+  @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    body {
+      overflow-y: auto;
+    }
+  }

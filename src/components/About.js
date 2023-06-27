@@ -1,36 +1,15 @@
 import { Container } from 'react-bootstrap';
 import './About.css';
-import html from '../assets/html.png'
-import css from '../assets/css.png'
-import js from '../assets/js.png'
-import nodejs from '../assets/nodejs.png'
-import linux from '../assets/linux.png'
-import mongo from '../assets/mongo.png'
-import aws from '../assets/aws.png'
-import react from '../assets/react.png'
-import bootstrap from '../assets/bootstrap.png'
+import Image from 'react-bootstrap/Image';
 import SectionBanner from './SectionBanner';
 import arrow from '../assets/arrow.png'
-import Image from 'react-bootstrap/Image';
 import downarrow from '../assets/downward-arrow.png';
 
 const About = () =>{
-    const images = [
-        {src:html,styleClass:"html-image"},
-        {src:css,styleClass:"css-image"},
-        {src:js,styleClass:"js-image"},
-        {src:nodejs,styleClass:"nodejs-image"},
-        {src:linux,styleClass:"linux-image"},
-        {src:mongo,styleClass:"mongo-image"},
-        {src:aws,styleClass:"aws-image"},
-        {src:react,styleClass:"react-image"},
-        {src:bootstrap,styleClass:"bootstrap-image"}
-        
-    ]
     return(
         <section id="about">
             <Container className='my-about-section'>
-                <SectionBanner title="About Me" />
+                <SectionBanner  title="About Me" />
                 <div className="my-description">
                 <Image src={arrow} className='animated-image-up'/>
                 <Image src={downarrow} className='animated-image-down'/>
