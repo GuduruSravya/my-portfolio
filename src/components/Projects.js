@@ -1,9 +1,13 @@
+import { Container } from "react-bootstrap";
+import SectionBanner from "./SectionBanner";
+
 const Projects = () =>{
     return(
-        <div id="projects">
-        <h1>Hey! This is Sravya Guduru</h1>
-        <h4>Thanks for visiting my portfolio</h4>
-        </div>
+        <section id="projects">
+            <Container>
+            <SectionBanner title="My Work"/>
+            </Container>
+        </section>
     );
 }
 
