@@ -53,7 +53,7 @@ function showMore(){
     
     <section id="skills">
       <Container>
-        <SectionBanner title="Skills Acquired"/>
+        <SectionBanner title="My Skills"/>
         <div id='my-skills'>
           {images.map((obj)=>(<div key={obj.name} className="image-div"><Image src={obj.src} className='image-size'/>
           <p>{obj.name}</p></div>
