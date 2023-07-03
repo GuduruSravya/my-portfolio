@@ -1,22 +1,48 @@
-
-.header{
-    
-    width: 100%;
+.custom-navbar,.custom-navbar.scrolled{
+    background-color: rgb(20, 25, 45);
+}
+ 
+.custom-nav:hover{
+    text-decoration: underline;
+    color: #6db1bf;
+    cursor: pointer;
+}
+.custom-nav{
+    font-size: 20px;
+    font-family: "Roboto";
+    font-weight: bold;
+    color: #6db1bf;
+}
+.custom-nav.active{
+    text-decoration: underline;
+    color: #ffbe0b !important;
+}
+.brand{
+    font-family: 'Acme';
+    font-weight: bolder;
+    color: #6db1bf;
+    font-size: 30px;
+    border: solid;
+    border-color: #ffbe0b;
+    border-radius: 80%;
+    width: 80px;
+    display: flex;
+    justify-content: center;
+}
+.icon{
+    background-color: #6db1bf;
+}
+.brand:hover{
+    color: #6db1bf;
+    font-size: 30px;
 }
 
-.custom-navbar{
-    background-color: white;
-    
-}
-.custom-navbar.scrolled {
-    background-color:  rgb(20, 20, 86);/* Change the background color when scrolled */
-  }
 
   .custom-navbar.scrolled .custom-nav{
     font-size: large;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-weight: bold;
-    color:white
+    color:#457b9d;
 }
 
 .custom-navbar.scrolled .custom-nav:hover{
@@ -30,19 +56,9 @@
     background-color: white;
 }
 
-.custom-nav{
-    font-size: large;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-weight: bold;
-    color: rgb(20, 20, 86);
-}
-
 @media screen and (max-width: 768px) {
 
-    .custom-nav:hover{
-        background-color: rgb(249, 243, 243);
-        color: rgb(20, 20, 86);
-    }
+    
 
   }
 

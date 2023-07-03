@@ -1,11 +1,10 @@
 .rounded-section {
     display: flex;
     justify-content: space-around;
-    border-radius: 10px;
-    background-color:  rgb(20, 20, 86);
+    border-radius: 20px;
+    background-color:   #6db1bf;
     padding: 10px;
-    color: white;
-    
+    color: #ffbe0b;
     width:100%;
     height: 100px;
     

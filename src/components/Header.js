@@ -1,59 +1,146 @@
-import React from 'react';
-import { useState,useEffect} from "react";
+import React, { useState, useEffect } from 'react';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 
+import CloseButton from 'react-bootstrap/CloseButton';
+import { Link } from 'react-scroll';
 
 import './header.css';
+
 const Header = () => {
   const [isNavExpanded, setIsNavExpanded] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
+  const [activeSection, setActiveSection] = useState('');
 
   const handleNavCollapse = () => {
     setIsNavExpanded(false);
   };
-  
+
   const handleToggleClick = () => {
     setIsNavExpanded(!isNavExpanded);
   };
 
-  const handleScroll = () => {
-    const scrollPosition = window.scrollY;
-    if (scrollPosition > 0) {
-      setIsScrolled(true);
-    } else {
-      setIsScrolled(false);
-    }
-  };
-
-  
-
   useEffect(() => {
+    const handleScroll = () => {
+      const sections = document.querySelectorAll('.section');
+      let currentSectionId = '';
+
+      sections.forEach((section) => {
+        const { top, bottom } = section.getBoundingClientRect();
+
+        if (top <= 0 && bottom > 0) {
+          currentSectionId = section.id;
+        }
+      });
+
+      setActiveSection(currentSectionId);
+    };
+
     window.addEventListener('scroll', handleScroll);
+
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
-  
+
   return (
-    <Navbar className={`custom-navbar ${isScrolled ? 'scrolled' : ''}`}
-      fixed="top" expand="lg" expanded={isNavExpanded}  onToggle={handleToggleClick}>
-    <Container>
-      <Navbar.Brand href="#home" className={isScrolled?"brand-scrolled":""}>SG</Navbar.Brand>
-      <Navbar.Toggle aria-controls="basic-navbar-nav" className={isScrolled?"toggle-icon":""} onClick={()=>{setIsNavExpanded(!isNavExpanded)}}/>
-      <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">
-        <Nav className="ml-auto justify-content-center text-center">
-          <Nav.Link href="#home" className="custom-nav" onClick={handleNavCollapse}>Home</Nav.Link>
-          <Nav.Link href="#about" className="custom-nav" onClick={handleNavCollapse}>About</Nav.Link>
-          <Nav.Link href="#skills" className="custom-nav"onClick={handleNavCollapse}>Skills</Nav.Link>
-          <Nav.Link href="#projects" className="custom-nav"onClick={handleNavCollapse}>Projects</Nav.Link>
-          <Nav.Link href="#contact" className="custom-nav"onClick={handleNavCollapse}>HireME!</Nav.Link> 
-        </Nav>
-      </Navbar.Collapse>
-    </Container>
-  </Navbar>
-    
+    <Navbar
+      className="custom-navbar"
+      fixed="top"
+      expand="lg"
+      expanded={isNavExpanded}
+      onToggle={handleToggleClick}
+    >
+      <Container fluid="lg">
+        <Navbar.Brand href="#home" className="brand">
+          SG
+        </Navbar.Brand>
+
+        <div
+          role="button"
+          tabIndex={0}
+          aria-controls="basic-navbar-nav"
+          className="navbar-toggler icon"
+          onClick={handleToggleClick}
+          onKeyDown={handleToggleClick}
+        >
+          {isNavExpanded ? (
+            <CloseButton />
+          ) : (
+            <span className="navbar-toggler-icon" />
+          )}
+        </div>
+        <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">
+          <Nav className="ml-auto justify-content-center text-center">
+            <Nav.Link
+              as={Link}
+              to="home"
+              spy={true}
+              smooth={true}
+              duration={500}
+              className={`custom-nav ${
+                activeSection === 'home' ? 'active' : ''
+              }`}
+              onClick={handleNavCollapse}
+            >
+              Home
+            </Nav.Link>
+            <Nav.Link
+              as={Link}
+              to="about"
+              spy={true}
+              smooth={true}
+              duration={500}
+              className={`custom-nav ${
+                activeSection === 'about' ? 'active' : ''
+              }`}
+              onClick={handleNavCollapse}
+            >
+              About
+            </Nav.Link>
+            <Nav.Link
+              as={Link}
+              to="skills"
+              spy={true}
+              smooth={true}
+              duration={500}
+              className={`custom-nav ${
+                activeSection === 'skills' ? 'active' : ''
+              }`}
+              onClick={handleNavCollapse}
+            >
+              Skills
+            </Nav.Link>
+            <Nav.Link
+              as={Link}
+              to="projects"
+              spy={true}
+              smooth={true}
+              duration={500}
+              className={`custom-nav ${
+                activeSection === 'projects' ? 'active' : ''
+              }`}
+              onClick={handleNavCollapse}
+            >
+              Projects
+            </Nav.Link>
+            <Nav.Link
+              as={Link}
+              to="contact"
+              spy={true}
+              smooth={true}
+              duration={500}
+              className={`custom-nav ${
+                activeSection === 'contact' ? 'active' : ''
+              }`}
+              onClick={handleNavCollapse}
+            >
+              HireME!
+            </Nav.Link>
+          </Nav>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
   );
 };
 
