@@ -1,72 +1,113 @@
+.about-section{
+  padding-top: 100px;
+  background-color: hsl(190, 39%, 70%);
+  height: 100vh;
+}
+
+.about-container{
+  width: 100%;
+  height: 100%;
+  padding-top: 30px;
+  
+}
 .section-banner {
-   padding-top: 50px;
    display: flex;
    align-items: center;
    margin: 0 auto;
  }
- .line {
-      height: 2px;
+ .line-div {
       width: 100%;
-      background-color: #141456; /* Set the line color */
  }
-.my-description{
-   position: relative;
-   height: 100%; /* Adjust height as needed */
-   width: 100%; /* Adjust width as needed */
-   background-color:rgb(249, 243, 243);
-   border-radius:10px;
-   margin: 0 auto;
-   
+ .line{
+  height: 2px;
+  width: 100%;
+  background-color:  rgb(20, 25, 45);
+  margin-left: 10px;
  }
- .centered-content{
-   display: flex;
+
+ .picture {
+  width: 350px;
+  height: 400px;
+  border:outset;
+  border-width:5px;
+  border-color: white;
+  border-radius: 10px;
+  margin-left: 20px;
+  margin-right: 20px;
+  
+}
+.row{
+  height: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.col{
+  height: 80%;
+}
+.about-content{
+  font-family: "Roboto";
+  color: rgb(20, 25, 45);
+  font-size: 20px;
+  font-weight: bold;
+  text-align: justify;
+  display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  height: 400px;
+  
+}
+
+.pagination-div{
+  position: relative;
+  top: 50px;
+  left: 10px;
+}
+.welcome-message{
+  font-family: Pacifico;
+  
+}
+.image-col {
   height: 100%;
-  width:100%
- }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.content-col{
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.pagination{
+  size: lg;
+}
+.page-link {
+  /* Add your custom styles for the pagination container */
+  background-color: rgb(20, 25, 45);
+  color: hsl(190, 39%, 70%);
+  
+}
+.active>.page-link,.page-link.active{
+  background-color: #ffbe0b;
+  color:  rgb(20, 25, 45);
+  border-color: #ffbe0b;
+}
 
- .centered-content p{
-   text-align: center;
-   padding: 10% 10% 5% 10%;
-   text-align: justify;
-   font-size: 15px;
-   
- }
+.div-line{
+  height: 100%;
+  width: 2px;
+  background-color:  rgb(20, 25, 45);;
+}
 
- .animated-image-up{
-   width: 80px; /* Adjust the width as needed */
-   height: 80px; /* Adjust the height as needed */
-   transform: translate(-50%, -50%);
-   position: absolute;
-   animation: jumpAnimation 1s ease-in-out infinite alternate;
-   top: 90%;
-   right:0;
-
- }
-
- .animated-image-down{
-   position: absolute;
-   width: 80px; /* Adjust the width as needed */
-   height: 80px; /* Adjust the height as needed */
-   top: 10%;
-   left: 5%;
-   transform: translate(-50%, -50%);
-   animation: jumpAnimation 1s ease-in-out infinite alternate;
- }
-
- 
- 
- @keyframes jumpAnimation {
-   0% {
-     transform: translate(-50%, -50%) translateY(0);
-   }
-   100% {
-     transform: translate(-50%, -50%) translateY(-5px);
-   }
- }
-
-
+.pagination .page-link:hover {
+  /* Add your custom styles for the page links on hover */
+  background-color: #ffbe0b;
+  color:  rgb(20, 25, 45);
+}
 
  @media screen and (max-width: 768px) {
 
@@ -78,6 +119,17 @@
     .section-banner{
       width: 100%;
       padding-left: 10px;
+    }
+    .about-section{
+      height: auto;
+    }
+    .col{
+      height: auto;
+    }
+    .pagination-div{
+      position: relative;
+      top: 0;
+      left: 20px;
     }
  }
 
