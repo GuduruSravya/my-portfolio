@@ -1,7 +1,13 @@
+.skills-section{
+  padding-top: 140px;
+  height: 100vh;
+  background-color: hsl(228, 38%, 17%);;
+}
+
 #my-skills{
   display:grid;
   grid-template-columns: auto auto auto;
-  padding-top: 20px;
+  padding-top: 50px;
   height:230px;
   overflow: hidden;
 }
@@ -36,7 +42,7 @@
 }
 
 #my-skills p{
-  color:#141456;
+  color:#6db1bf
 }
 
 .my-button{
