@@ -31,6 +31,7 @@
 }
 .icon{
     background-color: #6db1bf;
+    border-radius: 50%;
 }
 .brand:hover{
     color: #6db1bf;
@@ -59,6 +60,20 @@
 @media screen and (max-width: 768px) {
 
     
+
+  }
+
+  @media screen and (max-width: 480px) {
+
+    .brand{
+        font-size: 25px;
+        border-radius: 60%;
+        width: 60px;
+    }
+    .icon{
+        font-size: 1.10rem;
+    }
+   
 
   }
 

@@ -1,11 +1,11 @@
 import React from 'react';
 
-const SectionBanner = ({ title }) => {
+const SectionBanner = ({ title,color}) => {
   return (
     <div className="section-banner">
-      <h3 style={{color: " rgb(20, 25, 45)"}}>{title}</h3>
+      <h3 style={{color}}>{title}</h3>
       <div className="line-div">
-        <div className="line"></div>
+        <div className="line" style={{backgroundColor:color}}></div>
       </div>
     </div>
   );
