@@ -53,13 +53,10 @@
   color: var(--black-color);
   text-transform: capitalize;
 
-  span {
-    color: var(--secondary-color);
-  }
-
  
-
-  
+}
+.head-text span{
+  color: var(--secondary-color);
 }
 @media screen and (min-width: 2000px) {
   .head-text{
