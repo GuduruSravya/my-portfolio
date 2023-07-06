@@ -1,9 +1,14 @@
+import { Container } from "react-bootstrap";
+import SectionBanner from "./SectionBanner";
+
+
 const Contact = () =>{
     return(
-        <div id="contact">
-        <h1>Hire ME!</h1>
-        
-        </div>
+        <section id="contact">
+            <Container>
+                <SectionBanner title="Hire ME!"/>
+            </Container>
+        </section>
     );
 }
 
