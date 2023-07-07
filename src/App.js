@@ -8,6 +8,7 @@ function App() {
     <div className='app'>
       <Nav/>
       <Header/>
+      <About/>
     </div>
   );
 }
