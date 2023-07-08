@@ -8,27 +8,17 @@ import { urlFor,client} from '../../client';
 import Overlay from '../About/Overlay';
 import Modal from './Modal';
 import Card from './Card';
+import {AppWrap} from '../../wrapper';
 
 
 
 const About = () =>{
-   
-    const [abouts, setAbouts] = useState([])
-    let about = [
+    let abouts = [
         {title:"Education",type:"edu", imgUrl:images.education},
         {title:"Certifications",type:"honors",imgUrl:images.certificate},
         {title:"Accomplishments",type:"accomplished",imgUrl:images.milestone}
-]
-    useEffect(() => {
-      const query = '*[_type == "abouts"]'
-    
-      client.fetch(query)
-      .then((data) =>{
-        setAbouts(data)
-      })
-    }, [])
-    
-    
+        ]
+   
     return(
         <>
         <h2 className='head-text'>I know that<span> Skillful dev
@@ -38,8 +28,8 @@ const About = () =>{
         </h2>
         <div className='app__profiles'>
             
-            {about.map((about,index)=>(
-                <Card data={about}/>
+            {abouts.map((about,index)=>(
+                <Card data={about} index={index}/>
             ))}
              
             
@@ -49,4 +39,4 @@ const About = () =>{
     );
 }
 
-export default About;
+export default AppWrap(About,'about');
