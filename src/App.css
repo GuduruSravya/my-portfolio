@@ -16,6 +16,8 @@
   min-height: 100vh;
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
+  position: relative;
 }
 
 .app__flex {
@@ -26,10 +28,15 @@
 
 .app__wrapper {
   flex: 1;
-  width: 100%;
+  width: auto;
   flex-direction: column;
   padding: 4rem 2rem;
+}
 
+@media screen and (max-width: 450px) {
+  .app__wrapper {
+    padding: 4rem 1rem 2rem;
+  }
 }
 
 .copyright {
@@ -41,7 +48,7 @@
   align-items: flex-end;
 }
 
-.copyright  p {
+.copyright p {
   text-transform: uppercase;
   color: var(--black-color);
 }
@@ -52,58 +59,51 @@
   text-align: center;
   color: var(--black-color);
   text-transform: capitalize;
-
- 
 }
-.head-text span{
+
+.head-text span {
   color: var(--secondary-color);
 }
+
 @media screen and (min-width: 2000px) {
-  .head-text{
+  .head-text {
     font-size: 4rem;
   }
-  .p-text{
+  .p-text {
     font-size: 1.75rem;
   }
-  .bold-text{
+  .bold-text {
     font-size: 2rem;
   }
-  .app__social div{
-      width: 70px;
-      height: 70px;
-      margin: 0.5rem 0;
-    }
-    .app__social div svg{
-        width: 30px;
-        height: 30px;
-    }
-    .app__navigation-dot{
-      width: 20px;
-      height: 20px;
-    }
+  .app__social div {
+    width: 70px;
+    height: 70px;
+    margin: 0.5rem 0;
   }
-
+  .app__social div svg {
+    width: 30px;
+    height: 30px;
+  }
+  .app__navigation-dot {
+    width: 20px;
+    height: 20px;
+  }
+}
 
 @media screen and (max-width: 450px) {
-  .app__wrapper{
-    padding: 4rem 1rem 2rem;
-  } 
-  .head-text{
+  .head-text {
     font-size: 2rem;
   }
-  .bold-text{
+  .bold-text {
     font-size: 0.9rem;
   }
 }
-
 
 .p-text {
   font-size: 0.8rem;
   text-align: left;
   color: var(--gray-color);
   line-height: 1.5;
-
- 
 }
 
 .bold-text {
@@ -119,7 +119,9 @@
   align-items: center;
   flex-direction: column;
   padding: 1rem;
+  
 }
+
 .app__social div {
   width: 40px;
   height: 40px;
@@ -127,25 +129,24 @@
   background-color: var(--white-color);
   margin: 0.25rem 0;
   border: 1px solid var(--lightGray-color);
-
   display: flex;
   justify-content: center;
   align-items: center;
-
   transition: all 0.3s ease-in-out;
-  }
+}
+
 .app__social div svg {
   width: 15px;
   height: 15px;
   color: var(--gray-color);
 }
 
-.app__social div:hover{
+.app__social div:hover {
   background-color: var(--secondary-color);
   border-color: var(--secondary-color);
 }
 
-.app__social div:hover svg{
+.app__social div:hover svg {
   color: var(--white-color);
 }
 
@@ -155,9 +156,12 @@
   align-items: center;
   flex-direction: column;
   padding: 1rem;
+  width:100px;
+  right:0px;
+  top:1000px;
 }
 
-.app__navigation .app__navigation-dot{
+.app__navigation .app__navigation-dot {
   width: 10px;
   height: 10px;
   border-radius: 50%;
@@ -165,7 +169,8 @@
   margin: 0.5rem;
   transition: background-color 0.2s ease-in-out;
 }
-.app__navigation:hover {
+
+.app__navigation-dot:hover {
   background-color: var(--secondary-color);
 }
 
