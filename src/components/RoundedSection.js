@@ -3,8 +3,18 @@ import './rounded.css';
 import { Container } from 'react-bootstrap';
 
 const RoundedSection = ({ skillCount, dsaCount, projectCount }) => {
+  const style = {
+    color: "#14192d",
+    fontFamily:"Acme",
+    textDecoration:"underline",
+    textAlign:"center",
+};
+
   return (
     <Container>
+      <h2 style={style}>
+        STATISTICS
+      </h2><br/>
     <div className="rounded-section">
       <div className="count-card">
         <h3>{skillCount}</h3>

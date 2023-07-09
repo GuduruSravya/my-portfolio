@@ -1,11 +1,10 @@
 .rounded-section {
     display: flex;
     justify-content: space-around;
-    border-radius: 10px;
-    background-color:  rgb(20, 20, 86);
+    border-radius: 20px;
+    background-color:  rgb(20, 25, 45);
     padding: 10px;
-    color: white;
-    
+    color: #ffbe0b;
     width:100%;
     height: 100px;
     
@@ -18,18 +17,20 @@
     
   }
   .vertical-line {
-    width: 2px;
+    width: 1px;
     height: 80px;
-    background-color: #fff;
+    background-color: #ffbe0b;
     margin: 0 10px; /* Adjust the spacing between count cards and the line */
   }
   
   .count-card h3 {
+    font-family: "Acme";
     font-size: 1.875rem;
     margin-top: 5px;
   }
   
   .count-card p {
+    font-family: "Roboto";
     font-size: 10px;
     margin-top: 5px;
     font-weight: bold;
@@ -40,9 +41,7 @@
     .rounded-section {
        width: 100%;
       }
-    .vertical-line{
-        display: none;
-    }
+    
     .count-card p {
         font-size: 11px;
         font-weight:lighter;
@@ -56,18 +55,14 @@
     .rounded-section {
         width: 100%;
        }
-       .vertical-line{
-        display: none;
-    }
+      
     .count-card h3 {
         font-size: 20px;
-        
       }
     .count-card p {
-        font-size: 10px;
+        font-size: 8px;
         font-weight: lighter;
         letter-spacing: 0.04cm;
-        
       }
 
   }
