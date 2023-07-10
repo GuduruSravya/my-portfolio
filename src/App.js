@@ -9,6 +9,8 @@ function App() {
       <Nav/>
       <Header/>
       <About/>
+      <Projects/>
+      <Skills/>
     </div>
   );
 }
