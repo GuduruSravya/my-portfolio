@@ -1,11 +1,4 @@
-import React, { useState, useEffect } from 'react';
-import Container from 'react-bootstrap/Container';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
-
-import CloseButton from 'react-bootstrap/CloseButton';
-import { Link } from 'react-scroll';
-
+import React from 'react';
 import {motion} from 'framer-motion';
 import { images } from '../../constants';
 import { AppWrap } from '../../wrapper';
@@ -23,8 +16,6 @@ const scaleVariants={
 }
 
 const Header = () => {
- 
-
   return (
     <div className='app__header app__flex'>
       <motion.div
@@ -54,21 +45,19 @@ const Header = () => {
        className='app__header-img'
       >
         <img src={images.profile} alt="profile_bg"></img>
-        
-
       </motion.div>
       <motion.div
       variant={scaleVariants}
       whileInView={scaleVariants.whileInView}
       className='app__header-circles'
       >
-        {[images.node,images.react,images.python,images.amazon].map((logo,index)=>(
+        {[{img:images.github,imgUrl:"https://github.com/GuduruSravya"},
+          {img:images.linkedin,imgUrl:"https://www.linkedin.com/in/sravya-guduru/"},
+          {img:images.leetcode,imgUrl:"https://leetcode.com/Sravya_guduru/"}].map((obj,index)=>(
           <div className='logo-cmp app__flex' key={`logo-${index}`}>
-            <img src={logo} alt="logo"/>
-
+           <a href={obj.imgUrl} target="_blank"><img src={obj.img} alt="logo"/></a> 
           </div>
         ))}
-        
       </motion.div>
     </div>
   )

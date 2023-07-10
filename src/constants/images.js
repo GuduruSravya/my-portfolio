@@ -13,6 +13,10 @@ import certificate from '../assets/certificate.jpg';
 import stats from '../assets/stats.jpg';
 import accomplishment from '../assets/accompolishment.jpg';
 import milestone from '../assets/milestone.jpg';
+import github from '../assets/GitHub.png';
+import leetcode from '../assets/leetcode.png';
+import linkedin from '../assets/linkedin.png';
+
 
 
 
@@ -33,5 +37,8 @@ export default{
     certificate,
     stats,
     accomplishment,
-    milestone
+    milestone,
+    github,
+    leetcode,
+    linkedin
 }
