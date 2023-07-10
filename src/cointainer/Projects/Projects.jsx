@@ -1,7 +1,7 @@
 import React,{useState,useEffect} from "react";
 import {AiFillEye,AiFillGithub} from 'react-icons/ai'
 import {motion} from 'framer-motion';
-import { AppWrap } from "../../wrapper";
+import { AppWrap,MotionWrap } from "../../wrapper";
 import { urlFor,client } from "../../client";
 import './projects.css';
 const Projects = () =>{
@@ -21,7 +21,6 @@ const Projects = () =>{
     }, [])
     
     const filterProjects= (item)=>{
-        console.log(item);
         setActiveFilter(item);
         setAnimateCard([{y:100,opacity:0}]);
 
@@ -106,4 +105,4 @@ const Projects = () =>{
     );
 }
 
-export default AppWrap(Projects,'projects','app__works');
+export default AppWrap(MotionWrap(Projects,'app__works'),'projects','app__primarybg');
