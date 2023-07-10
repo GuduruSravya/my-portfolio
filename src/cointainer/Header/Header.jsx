@@ -8,6 +8,7 @@ import { Link } from 'react-scroll';
 
 import {motion} from 'framer-motion';
 import { images } from '../../constants';
+import { AppWrap } from '../../wrapper';
 
 import './header.css';
 const scaleVariants={
@@ -25,7 +26,7 @@ const Header = () => {
  
 
   return (
-    <div id="home" className='app__header app__flex'>
+    <div className='app__header app__flex'>
       <motion.div
         whileInView={{x:[-100,0],opacity:[0,1]}}
         transition={{duration:0.5}}
@@ -33,7 +34,7 @@ const Header = () => {
       >
         <div className='app__header-badge'>
           <div className="badge-cmp app__flex">
-            <span>🙋‍♀️</span>
+            <span>💁‍♀️</span>
             <div style={{marginLeft:20}}>
               <p className='p-text'>Hello, I am</p>
               <h1 className='head-text'><span>Sravya</span></h1>
@@ -73,5 +74,5 @@ const Header = () => {
   )
 };
 
-export default Header;
+export default AppWrap(Header,'home');
 
