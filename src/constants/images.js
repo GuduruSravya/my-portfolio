@@ -7,7 +7,6 @@ import react from '../assets/react.png';
 import node from '../assets/node.png';
 import python from '../assets/python.png';
 import bgIMG from '../assets/bgIMG.png';
-import sample from '../assets/sample.png';
 import education from '../assets/education.jpg';
 import certificate from '../assets/certificate.jpg';
 import stats from '../assets/stats.jpg';
@@ -16,12 +15,8 @@ import milestone from '../assets/milestone.jpg';
 import github from '../assets/GitHub.png';
 import leetcode from '../assets/leetcode.png';
 import linkedin from '../assets/linkedin.png';
-
-
-
-
-
-
+import email from '../assets/email.png';
+import mobile from '../assets/mobile.png';
 
 export default{
     logo,
@@ -32,7 +27,7 @@ export default{
     amazon,
     node,
     python,
-    bgIMG,sample,
+    bgIMG,
     education,
     certificate,
     stats,
@@ -40,5 +35,7 @@ export default{
     milestone,
     github,
     leetcode,
-    linkedin
+    linkedin,
+    email,
+    mobile
 }
