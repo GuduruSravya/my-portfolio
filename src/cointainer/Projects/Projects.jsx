@@ -5,6 +5,13 @@ import { AppWrap,MotionWrap } from "../../wrapper";
 import { urlFor,client } from "../../client";
 import './projects.css';
 const Projects = () =>{
+
+    const tagNames = {"React":"React Project",
+                      "Static":"Landing Page",
+                      "Java":"Java-SpringBOOT",
+                      "Python":"Python",
+                      "AI/ML":"AI/ML",
+                    "All":"All"}
     const [activeFilter, setActiveFilter] = useState('All');
     const [animateCard, setAnimateCard] = useState({y:0,opacity:1});
     const [projects, setProjects] = useState([]);
@@ -40,7 +47,7 @@ const Projects = () =>{
         <>
         <h2 className="head-text">My creative<span>Portfolio</span></h2>
         <div className="app__work-filter">
-            {['React JS','Landing pages','MERN','Java','Exploring python!','AI/ML','All'].map((item,index)=>(
+            {['React','Static','MERN','Java','Python','AI/ML','All'].map((item,index)=>(
                 <div 
                     key = {index}
                     onClick={() => filterProjects(item)}
@@ -93,7 +100,7 @@ const Projects = () =>{
                         <h4 className="bold-text">{project.title}</h4>
                         <p className="p-text" style={{marginTop:10}}>{project.description}</p>
                         <div className="app__work-tag app__flex">
-                            <p className="p-text">{project.tags[0]}</p>
+                            <p className="p-text">{tagNames[project.tags[0]]}</p>
                         </div>
                     </div>
                 </div>
