@@ -84,7 +84,7 @@
     justify-content: flex-end;
     align-items: flex-end;
     flex-direction: column;
-    background: url('../../assets/bgWhite.png');
+    background: linear-gradient(rgba(255,255,255,0.7),rgb(255, 255, 255)),url('../../assets/maincover.jpg');
     background-color: var(--white-color);
     background-size: cover;
     background-repeat: repeat;

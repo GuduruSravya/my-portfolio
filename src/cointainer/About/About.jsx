@@ -30,7 +30,7 @@ const About = () =>{
         <div className='app__profiles'>
             
             {abouts.map((about,index)=>(
-                <Card data={about} index={index}/>
+                <Card data={about} index={index} key={index}/>
             ))}
              
             

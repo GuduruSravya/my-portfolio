@@ -7,6 +7,11 @@ import './Nav.css'
 
 const Nav = () => {
   const [toggle, setToggle] = useState(false);
+
+  const handleOnClick = (e) =>{
+    e.stopPropagation();
+    setToggle(prevState => !prevState);
+  }
   return (
     <nav className='app__navbar'>
         <div className='app__navbar-logo'>
@@ -21,14 +26,22 @@ const Nav = () => {
           ))}
         </ul>
         <div className='app__navbar-menu'>
-            <LuMenu onClick={()=>setToggle(true)}/>
+            <LuMenu onClick={handleOnClick}/>
             {toggle && (
               <motion.div
-              whileInView={{x:[300,0]}}
+              initial={{width:0}}
+              animate={{width:300}}
               transition={{duration:0.85,ease:'easeInOut'}}
               className='motion-div'
               >
-                <HiX onClick={()=>setToggle(false)}/>
+                <motion.span
+                  initial={{ width: 0 }}
+                  animate={{ width: 70 }}
+                  transition={{ duration: 0.85, ease: "easeOut" }}
+                >
+
+                </motion.span>
+                <HiX onClick={handleOnClick}/>
                 <ul>
                 {['home','about','projects','skills','contact'].map((section) => (
             <li key={section}>

@@ -54,9 +54,10 @@ const Header = () => {
         {[{img:images.github,imgUrl:"https://github.com/GuduruSravya"},
           {img:images.linkedin,imgUrl:"https://www.linkedin.com/in/sravya-guduru/"},
           {img:images.leetcode,imgUrl:"https://leetcode.com/Sravya_guduru/"}].map((obj,index)=>(
-          <div className='logo-cmp app__flex' key={`logo-${index}`}>
-           <a href={obj.imgUrl} target="_blank"><img src={obj.img} alt="logo"/></a> 
-          </div>
+          <a href={obj.imgUrl} target="_blank" key={`logo-${index}`}>
+          <div className='logo-cmp app__flex'>
+          <img src={obj.img} alt="logo"/>
+          </div></a> 
         ))}
       </motion.div>
     </div>

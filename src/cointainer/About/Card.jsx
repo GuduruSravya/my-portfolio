@@ -24,6 +24,7 @@ const Card = ({data,index}) => {
     >
       <img src={data.imgUrl}/>
       <h2 className='bold-text'>{data.title}</h2>
+      <p className='p-text' style={{textTransform:'lowercase'}}>Click to know about my {data.title}</p>
     </motion.div>
     {open && <Overlay close={closeModel}>
                         <Modal data={data} close={closeModel}/>

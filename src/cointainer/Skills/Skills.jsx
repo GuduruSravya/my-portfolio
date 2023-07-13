@@ -16,7 +16,7 @@ const Skills = () => {
 
     client.fetch(query)
     .then((data)=>{
-      console.log(data);
+      
       setExperiences(data);
       
     })
@@ -40,7 +40,7 @@ const Skills = () => {
           className="app__skills-item app__flex"
           key={skill.name}
         >
-          <div className="app__flex" style={{backgroundColor:skill.bgColor}}>
+          <div className="app__flex" style={{backgroundColor:skill.bgColor}} key={skill.name}>
             <img src={urlFor(skill.icon)} alt={skill.name}/>
           </div>
           <p className="p-text">{skill.name}</p>
@@ -50,15 +50,15 @@ const Skills = () => {
       </motion.div>
       <motion.div className="app__skills-exp">
         {
-          experiences.map((experience)=>(
+          experiences.map((experience,index)=>(
             <motion.div
             className="app__skills-exp-item"
             key={experience.year}
             >
-              <div className="app__skills-exp-year">
+              <div className="app__skills-exp-year" key={index}>
                 <p className="bold-text">{experience.year}</p>
               </div>
-              <motion.div className="app__skills-exp-works">
+              <motion.div className="app__skills-exp-works" key={`${experience.year}-div`}>
                 {
                   experience.projects.map((project)=>(
                     <>
@@ -87,8 +87,6 @@ const Skills = () => {
                 }
               </motion.div>
             </motion.div>
-            
-           
           ))
         }
 
