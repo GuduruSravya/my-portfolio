@@ -106,7 +106,6 @@
 
 @media only screen and (min-width:1281px){
     .modal{
-        
         height:80%;
         max-width:1800px;
         justify-content: space-between;
@@ -115,7 +114,6 @@
         padding: 30px;
     }
     .modal__image{
-        width:calc(70% -10px);
         height: 100%;
     }
 }

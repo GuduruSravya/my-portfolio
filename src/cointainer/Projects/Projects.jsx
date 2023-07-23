@@ -9,6 +9,7 @@ const Projects = () =>{
     const tagNames = {"React":"React Project",
                       "Static":"Landing Page",
                       "Java":"Java-SpringBOOT",
+                      "MERN" :"MERN",
                       "Python":"Python",
                       "AI/ML":"AI/ML",
                     "All":"All"}
@@ -45,7 +46,7 @@ const Projects = () =>{
     }
     return(
         <>
-        <h2 className="head-text">My creative<span>Portfolio</span></h2>
+        <h2 className="head-text">My <span>Portfolio</span></h2>
         <div className="app__work-filter">
             {['React','Static','MERN','Java','Python','AI/ML','All'].map((item,index)=>(
                 <div 
@@ -63,7 +64,9 @@ const Projects = () =>{
         transition={{duration:0.5, delayChildren:0.5}}
         className="app__work-portfolio"
         >
-        {
+            
+        { (filterProject.length!==0)?
+           
             filterProject.map((project,index)=>(
                 <div className="app__work-item app__flex" key={index}>
                     <div className="app__work-img app__flex">
@@ -104,7 +107,13 @@ const Projects = () =>{
                         </div>
                     </div>
                 </div>
-            ))
+            )):<>
+            
+            <h1 className="head-text">Coming<span> Soon...</span></h1>
+            
+            </>
+            
+            
         }
 
         </motion.div>

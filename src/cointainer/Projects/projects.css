@@ -145,3 +145,15 @@
     }
     
 }
+
+@media screen and (max-width:900px){
+    .app__work-hover .icon-div {
+        opacity: 1;
+        pointer-events: none; /* Disable pointer events for icons on mobile devices */
+      }
+    
+      /* Remove hover effect on mobile devices */
+      .app__work-hover{
+        opacity: 1; /* Hide the hover overlay on mobile devices */
+      }
+}

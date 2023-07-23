@@ -64,8 +64,8 @@ const Modal = ({data,close}) => {
        :<div>
         <h2 className='head-text' style={{fontSize:'2rem'}}>Accomplishments</h2>
         <span className='p-text' style={{color:'#004aad'}}>Goldmedalist:</span><span className='p-text'> University Topper-Bachelors</span><br/><br/>
-        <span className='p-text' style={{color:'#004aad'}}>DSA Problems Solved: </span><span className='p-text'>100+</span><br/><br/>
-        <span className='p-text' style={{color:'#004aad'}}>Projects Completed: </span><span className='p-text'>7+</span><br/><br/>
+        {/*<span className='p-text' style={{color:'#004aad'}}>DSA Problems Solved: </span><span className='p-text'>100+</span><br/><br/>
+        <span className='p-text' style={{color:'#004aad'}}>Projects Completed: </span><span className='p-text'>7+</span><br/><br/>*/}
         <span className='p-text' style={{color:'#004aad'}}>Verified Skills: </span><span className='p-text'>10+</span><br/>
 
        </div>
