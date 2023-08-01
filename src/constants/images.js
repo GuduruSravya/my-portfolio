@@ -17,6 +17,7 @@ import leetcode from '../assets/leetcode.png';
 import linkedin from '../assets/linkedin.png';
 import email from '../assets/email.png';
 import mobile from '../assets/mobile.png';
+import latestprofile from '../assets/latestprofile.png';
 
 export default{
     logo,
@@ -37,5 +38,6 @@ export default{
     leetcode,
     linkedin,
     email,
-    mobile
+    mobile,
+    latestprofile
 }

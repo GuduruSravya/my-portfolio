@@ -44,7 +44,7 @@ const Header = () => {
        transition={{duration:0.5,delayChildren:0.5}}
        className='app__header-img'
       >
-        <img src={images.profile} alt="profile_bg"></img>
+        <img src={images.latestprofile} alt="profile_bg"></img>
       </motion.div>
       <motion.div
       variant={scaleVariants}
